@@ -22,22 +22,21 @@ const Banner = () => {
           <BannerContent>
             <Heading
               className="animate__animated animate__fadeInUp"
-              content="The leading Customer dashboard for your daily workspace"
+              content="Create Your Zen Symphony: Craft Personalized Meditations with Ease!"
             />
             <Text
               className="animate__animated animate__fadeInUp"
-              content="Join 30,000+ businesses that use Segment's software and APIs to
-              collect, clean, and control their customer data."
+              content="Be in the Know: Enter your email below to stay updated on our progress and be the first to access the ultimate meditation customization tool when it's launched!"
             />
             <Subscribe className="animate__animated animate__fadeInUp">
               <Input
                 inputType="email"
-                placeholder="Your work email"
+                placeholder="Your email"
                 iconPosition="left"
                 aria-label="email"
                 icon={<img src={envelope?.src} alt="envelope" />}
               />
-              <Button title="Get a demo" type="submit" />
+              <Button title="Signup" type="submit" />
             </Subscribe>
           </BannerContent>
           <Figure className="animate__animated animate__fadeInUp animate__fast">

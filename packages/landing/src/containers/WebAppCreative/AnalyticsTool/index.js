@@ -13,9 +13,9 @@ import analytics from 'common/assets/image/webAppCreative/analytics.png';
 import Section, { Grid, Figure, Content, Features } from './analytics.style';
 import parallaxBg from 'common/assets/image/webAppCreative/parallax-1.png';
 
-import { analyticsTool } from 'common/data/WebAppCreative';
+import { customMeditation } from 'common/data/WebAppCreative';
 
-const AnalyticsTool = () => {
+const CustomMeditation = () => {
   return (
     <Section bgImage={parallaxBg?.src} bgImageAlt="the cat" strength={200}>
       <Container width="1400px">
@@ -26,20 +26,20 @@ const AnalyticsTool = () => {
             </Figure>
           </Fade>
           <Content>
-            <Text className="subtitle" content={analyticsTool.slogan} />
-            <Heading content={analyticsTool.title} />
-            <Text className="description" content={analyticsTool.desc} />
+            <Text className="subtitle" content={customMeditation.slogan} />
+            <Heading content={customMeditation.title} />
+            <Text className="description" content={customMeditation.desc} />
             <Features>
-              {analyticsTool.features.map((feat, i) => (
+              {customMeditation.features.map((feat, i) => (
                 <li key={i}>
                   <Icon icon={check} size={22} />
                   {feat}
                 </li>
               ))}
             </Features>
-            <Link href={analyticsTool.button.link} className="explore">
+            <Link href={customMeditation.button.link} className="explore">
               <Button
-                title={analyticsTool.button.label}
+                title={customMeditation.button.label}
                 icon={<Icon icon={ic_keyboard_arrow_right} size={24} />}
               />
             </Link>
@@ -50,4 +50,4 @@ const AnalyticsTool = () => {
   );
 };
 
-export default AnalyticsTool;
+export default CustomMeditation;

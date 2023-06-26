@@ -20,6 +20,8 @@ import CallToAction from 'containers/WebAppCreative/CallToAction';
 import Footer from 'containers/WebAppCreative/Footer';
 import { GlobalStyle, ContentWrapper, CombinedSection, CornerPattern } from 'containers/WebAppCreative/webAppCreative.style';
 import 'animate.css';
+import CustomMeditation from 'containers/WebAppCreative/AnalyticsTool';
+
 
 const webAppCreative = () => {
   return (
@@ -47,17 +49,10 @@ const webAppCreative = () => {
             </DrawerProvider>
           </Sticky>
           <Banner />
-          <Clients />
           <HowItWorks />
-          <AnalyticsTool />
+          <CustomMeditation />
           <Dashboard />
-          <Testimonials />
-          <CombinedSection>
-            <Integrations />
-            <Pricing />
-            <CornerPattern />
-          </CombinedSection>
-          <NewsFeed />
+
           <Faq />
           <CallToAction />
           <Footer />

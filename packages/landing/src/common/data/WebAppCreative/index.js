@@ -4,10 +4,10 @@ import forbes from 'common/assets/image/webAppCreative/clients/forbes.png';
 import geekwire from 'common/assets/image/webAppCreative/clients/geekwire.png';
 import slack from 'common/assets/image/webAppCreative/clients/slack.png';
 import usaToday from 'common/assets/image/webAppCreative/clients/usa-today.png';
-import icon1 from 'common/assets/image/webAppCreative/icons/1.png';
-import icon2 from 'common/assets/image/webAppCreative/icons/2.png';
-import icon3 from 'common/assets/image/webAppCreative/icons/3.png';
-import icon4 from 'common/assets/image/webAppCreative/icons/4.png';
+import icon1 from 'common/assets/image/webAppCreative/icons/custom_icon.svg';
+import icon2 from 'common/assets/image/webAppCreative/icons/voice_icon.svg';
+import icon3 from 'common/assets/image/webAppCreative/icons/ai_icon.svg';
+import icon4 from 'common/assets/image/webAppCreative/icons/listen_icon.svg';
 import icon5 from 'common/assets/image/webAppCreative/icons/5.png';
 import icon6 from 'common/assets/image/webAppCreative/icons/6.png';
 import icon7 from 'common/assets/image/webAppCreative/icons/7.png';
@@ -52,16 +52,6 @@ export const menu_items = [
     offset: '70',
   },
   {
-    label: 'Testimonial',
-    path: '#testimonial',
-    offset: '70',
-  },
-  {
-    label: 'Pricing',
-    path: '#pricing',
-    offset: '70',
-  },
-  {
     label: 'Faq',
     path: '#faq',
     offset: '70',
@@ -74,45 +64,45 @@ export const howTos = [
   {
     id: 1,
     icon: icon1,
-    title: 'Manage Smartly',
-    text: `Stay on top of your task lists and stay in touch with what's happening`,
+    title: 'Select Your Meditation Style',
+    text: `Choose from a variety of meditation styles that align with your intentions and goals.`,
     linkLabel: 'Learn More',
     link: '#',
   },
   {
     id: 2,
     icon: icon2,
-    title: 'Monitor user Analytics',
-    text: `Stay on top of your task lists and stay in touch with what's happening`,
+    title: 'Select Your Voice',
+    text: `Find the perfect voice to guide you through your meditation journey.`,
     linkLabel: 'Learn More',
     link: '#',
   },
   {
     id: 3,
     icon: icon3,
-    title: 'Safe & Trusted',
-    text: `Get the best DoorDash experience with live order tracking.`,
+    title: 'Let the AI Generate Your Meditation ',
+    text: `AI seamlessly combines your chosen meditation style, voice selection, and custom inputs to create a meditation experience crafted specifically for you.`,
     linkLabel: 'Learn More',
     link: '#',
   },
   {
     id: 4,
     icon: icon4,
-    title: 'Fast Customer Support',
-    text: `Get the best DoorDash experience with live order tracking.`,
+    title: 'Get Your Voice-Generated Meditation',
+    text: `Receive your voice-generated meditation in an instant. Enjoy a transformative meditation experience that combines the selected style, voice, and personalized script. `,
     linkLabel: 'Learn More',
     link: '#',
   },
 ];
 
-export const analyticsTool = {
-  slogan: 'Audience source monitoring',
-  title: 'Advanced analytics tools to keep you in control & customizable',
-  desc: `Pick one of our stock themes, or create your custom theme with the most advanced theme editor on any online survey building tool.`,
+export const customMeditation = {
+  slogan: 'Customize your meditations',
+  title: ' Personalize Your Meditation Experience',
+  desc: `Choose your preferred meditation style and let our advanced AI technology generate personalized meditation scripts just for you.`,
   features: [
-    'Chat promt module supported',
-    'Enjoy unlimited features by paid plans',
-    'Manage ultimate conversation',
+    'Choose from a variety of meditation styles, including mindfulness, trauma healing, gratitude, and more',
+    'Personalize your meditation experience by selecting your desired style to align with your intentions and goals',
+    'Discover the power of personalized meditations that address specific areas of focus, such as mindfulness, healing, or cultivating gratitude',
   ],
   button: {
     link: '#',
