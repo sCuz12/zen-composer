@@ -11,7 +11,7 @@ import icon4 from 'common/assets/image/webAppCreative/icons/listen_icon.svg';
 import icon5 from 'common/assets/image/webAppCreative/icons/5.png';
 import icon6 from 'common/assets/image/webAppCreative/icons/6.png';
 import icon7 from 'common/assets/image/webAppCreative/icons/7.png';
-import dashboardImg from 'common/assets/image/webAppCreative/dashboard-2.png';
+import dashboardImg from 'common/assets/image/webAppCreative/banner_image.png';
 import asana from 'common/assets/image/webAppCreative/icons/asana.png';
 import drive from 'common/assets/image/webAppCreative/icons/drive.png';
 import dropbox from 'common/assets/image/webAppCreative/icons/dropbox.png';

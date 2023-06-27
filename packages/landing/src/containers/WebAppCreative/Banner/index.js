@@ -11,10 +11,10 @@ import Section, {
   Subscribe,
   Figure,
 } from './banner.style';
-import dashboard from 'common/assets/image/webAppCreative/dashboard.png';
+import banner_image from 'common/assets/image/webAppCreative/banner_image.png';
 import envelope from 'common/assets/image/webAppCreative/icons/envelope.png';
 
-const Banner = () => {
+const Banner = ({signUpHandler,emailChangeHandler,enableSubmit}) => {
   return (
     <Section id="home">
       <Container width="1400px">
@@ -34,13 +34,14 @@ const Banner = () => {
                 placeholder="Your email"
                 iconPosition="left"
                 aria-label="email"
+                onChange={emailChangeHandler}
                 icon={<img src={envelope?.src} alt="envelope" />}
               />
-              <Button title="Signup" type="submit" />
+              <Button className="disabled:opacity-30" disabled={!enableSubmit} onClick={signUpHandler} title="Signup" type="submit" />
             </Subscribe>
           </BannerContent>
           <Figure className="animate__animated animate__fadeInUp animate__fast">
-            <NextImage src={dashboard} alt="dashboard" />
+            <NextImage src={banner_image} alt="dashboard" />
           </Figure>
         </BannerContentWrapper>
       </Container>

@@ -24,12 +24,11 @@ import { footerTop, footer } from 'common/data/WebAppCreative';
 const Footer = () => {
   return (
     <Section>
-      <div className='flex w-1/2 bg-black'>
       <Container width="1400px">
-        <Grid>
 
+          <div className='flex w-full justify-center items-center'>
           <ContactInfo>
-            <Heading className="text-red-300" as="h4" content={footerTop.contactInfo.title} />
+            <Heading as="h4" content={footerTop.contactInfo.title} />
             <InfoItem>
               <Icon icon={ic_place} size={24} />
               <Text content={footerTop.contactInfo.address} />
@@ -38,7 +37,7 @@ const Footer = () => {
               <Icon icon={ic_phone} size={26} className="phone-icon" />
               <div>
                 <Text
-                  className="phone-number bg-red-300"
+                  className="phone-number"
                   content={footerTop.contactInfo.phone}
                 />
                 <Text content={footerTop.contactInfo.openingTime} />
@@ -49,11 +48,10 @@ const Footer = () => {
               <Text content={footerTop.contactInfo.email} />
             </InfoItem>
           </ContactInfo>
-        </Grid>
+          </div>
+          
+  
       </Container>
-      </div>
- 
-
     </Section>
   );
 };

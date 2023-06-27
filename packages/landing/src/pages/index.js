@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
 import Sticky from 'react-stickynode';
@@ -18,12 +18,59 @@ import NewsFeed from 'containers/WebAppCreative/NewsFeed';
 import Faq from 'containers/WebAppCreative/Faq';
 import CallToAction from 'containers/WebAppCreative/CallToAction';
 import Footer from 'containers/WebAppCreative/Footer';
-import { GlobalStyle, ContentWrapper, CombinedSection, CornerPattern } from 'containers/WebAppCreative/webAppCreative.style';
+import { GlobalStyle, ContentWrapper } from 'containers/WebAppCreative/webAppCreative.style';
 import 'animate.css';
 import CustomMeditation from 'containers/WebAppCreative/AnalyticsTool';
 
 
 const webAppCreative = () => {
+
+  const [email,setEmail] = useState("");
+  const [enableSubmit,setEnableSubmit] = useState(false);
+
+  //email change 
+  useEffect(()=>{
+    const isValidEmail = validateEmail(email);
+    setEnableSubmit(isValidEmail);
+  },[email])
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  //Handle submit email to Newsletter
+  const signUpButtonHandler = (e) => {
+    e.preventDefault();
+
+    const payload = { email: email };
+  
+    fetch(process.env.NEXT_PUBLIC_SEND_BLUE_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "api-key": process.env.NEXT_PUBLIC_SEND_BLUE_API,
+      },
+      body: JSON.stringify(payload),
+    })
+      .then((response) => {
+        console.log(response);
+        if (response.ok) {
+          localStorage.setItem('emailSubmitted', 'true');
+        } else {
+          console.log("Error: POST request failed.");
+          // Handle the case where the request failed
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        // Handle any errors that occurred during the request
+      });
+   
+  }
+  
+
+
   return (
     <ThemeProvider theme={theme}>
       <Fragment>
@@ -41,14 +88,14 @@ const webAppCreative = () => {
 
         <ResetCSS />
         <GlobalStyle />
-
+    
         <ContentWrapper>
           <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
             <DrawerProvider>
               <Navbar />
             </DrawerProvider>
           </Sticky>
-          <Banner />
+          <Banner signUpHandler={signUpButtonHandler} emailChangeHandler={setEmail} enableSubmit={enableSubmit}/>
           <HowItWorks />
           <CustomMeditation />
           <Dashboard />
