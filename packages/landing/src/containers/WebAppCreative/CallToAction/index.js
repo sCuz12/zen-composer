@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
-import { Icon } from 'react-icons-kit';
-import { androidArrowDropdown } from 'react-icons-kit/ionicons/androidArrowDropdown';
 import Container from 'common/components/UI/Container';
 // import Button from 'common/components/Button';
 import Button from 'common/components/Button';
-import Link from 'common/components/Link';
 import Heading from 'common/components/Heading';
 import Text from 'common/components/Text';
 import Section, { Content, DownloadButton, DownloadOptions } from './cta.style';
@@ -12,14 +9,12 @@ import bubble1 from 'common/assets/image/webAppCreative/cta-bubble-1.png';
 import bubble2 from 'common/assets/image/webAppCreative/cta-bubble-2.png';
 import { Subscribe } from '../Banner/banner.style';
 import Input from 'common/components/Input';
+import Alert from 'common/components/Alert';
 
 const menuItemWords = ['Download for MacOS', 'Download for Windows x64'];
 
-const CallToAction = () => {
-  const [downloadFor, setDownloadFor] = useState('Download for MacOS');
-  const handleSelection = (value, event) => {
-    setDownloadFor(value);
-  };
+const CallToAction = ({signUpHandler,emailChangeHandler,enableSubmit,emailSubmitted}) => {
+
   return (
     <Section>
       <img src={bubble1?.src} className="bubble-1" alt="bubble1" />
@@ -33,10 +28,17 @@ const CallToAction = () => {
                 placeholder="Your email"
                 iconPosition="left"
                 aria-label="email"
-            
+                onChange={emailChangeHandler}
               />
-              <Button className="trail" title="Signup" type="submit" />
+              <Button className="disabled:opacity-30 trail" disabled={!enableSubmit} onClick={signUpHandler} title="Signup" type="submit" />
           </Subscribe>
+          {emailSubmitted && (
+            <div className='flex w-full justify-center items-center  p-8'>
+              <Alert className="rounded-b px-4 py-3 shadow-md" role="alert">
+                <p className='text-black'>Email Succesfully Submitted </p>
+              </Alert>
+            </div>
+          )}
           {/* <span>
             <Link href="#">2,500+ Upvote on ProductHunt</Link>
           </span> */}

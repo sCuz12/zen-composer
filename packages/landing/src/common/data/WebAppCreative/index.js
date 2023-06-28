@@ -11,7 +11,10 @@ import icon4 from 'common/assets/image/webAppCreative/icons/listen_icon.svg';
 import icon5 from 'common/assets/image/webAppCreative/icons/5.png';
 import icon6 from 'common/assets/image/webAppCreative/icons/6.png';
 import icon7 from 'common/assets/image/webAppCreative/icons/7.png';
-import dashboardImg from 'common/assets/image/webAppCreative/banner_image.png';
+import mindfulness_icon from 'common/assets/image/webAppCreative/icons/mindfulness.png';
+import breathing_icon from 'common/assets/image/webAppCreative/icons/breathing.png';
+import gratitude_icon from 'common/assets/image/webAppCreative/icons/gratitude.png';
+import relaxation_icon from 'common/assets/image/webAppCreative/icons/relaxation.png';
 import asana from 'common/assets/image/webAppCreative/icons/asana.png';
 import drive from 'common/assets/image/webAppCreative/icons/drive.png';
 import dropbox from 'common/assets/image/webAppCreative/icons/dropbox.png';
@@ -47,8 +50,8 @@ export const menu_items = [
     offset: '70',
   },
   {
-    label: 'Features',
-    path: '#features',
+    label: 'Meditations',
+    path: '#meditations',
     offset: '70',
   },
   {
@@ -111,35 +114,39 @@ export const customMeditation = {
 };
 
 export const dashboard = {
-  sectionTitle: 'Get on the same page, fast.',
-  sectionDesc: `Each room is loaded with collaborative surfaces so you can quickly take notes, capture to-dos, and share ideas. Pick one of our stock themes, or create your custom theme with the most advanced theme editor.`,
+  sectionTitle: 'Embark on a Journey of Personalized Meditations with ZenComposer Creations',
+  sectionDesc: `Indulge in Tailor-Made Meditations. Find Serenity in Every Breath. Experience Meditations Like Never Before. Your Journey to Inner Peace Begins Here`,
   tabs: [
     {
       id: 1,
-      title: 'Dashboard',
+      title: 'Mindfulness',
       content: {
-        image: dashboardImg,
+        image: mindfulness_icon,
+        voice : "/meditations/mindfulness.mp3"
       },
     },
     {
       id: 2,
-      title: 'Whiteboard',
+      title: 'Graditute',
       content: {
-        image: dashboardImg,
+        image: gratitude_icon,
+        voice : "/meditations/gratitude.mp3"
       },
     },
     {
       id: 3,
-      title: 'Transaction',
+      title: 'Breathing',
       content: {
-        image: dashboardImg,
+        image: breathing_icon,
+        voice : "/meditations/breathing.mp3"
       },
     },
     {
       id: 4,
-      title: 'Float',
+      title: 'Relaxation',
       content: {
-        image: dashboardImg,
+        image: relaxation_icon,
+        voice : "/meditations/mindfulness.mp3"
       },
     },
   ],

@@ -10,7 +10,7 @@ import { dashboard } from 'common/data/WebAppCreative';
 
 const Dashboard = () => {
   return (
-    <Section id="features">
+    <Section id="meditations">
       <Container width="1400px">
         <SectionHeading>
           <Heading content={dashboard.sectionTitle} />
@@ -24,14 +24,25 @@ const Dashboard = () => {
               ))}
             </TabList>
           </nav>
+          <div className='pt-24'>
 
+   
           {dashboard.tabs.map((tab) => (
-            <TabPanel key={tab.id}>
-              <figure className="animate__animated animate__fadeInUp">
-                <NextImage src={tab.content.image} alt={tab.title} />
-              </figure>
-            </TabPanel>
+            < div className='flex items-center justify-center'>
+              <TabPanel key={tab.id}>
+                <figure className="animate__animated animate__fadeInUp">
+                  <NextImage src={tab.content.image} alt={tab.title} />
+                </figure>
+                <div>
+                <audio controls>
+                  <source src={tab.content.voice} type="audio/mpeg" />
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
+              </TabPanel>
+            </div>
           ))}
+                 </div>
         </ReactTabs>
       </Container>
     </Section>

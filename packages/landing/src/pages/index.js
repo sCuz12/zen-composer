@@ -25,14 +25,15 @@ import CustomMeditation from 'containers/WebAppCreative/AnalyticsTool';
 
 const webAppCreative = () => {
 
-  const [email,setEmail] = useState("");
-  const [enableSubmit,setEnableSubmit] = useState(false);
+  const [email, setEmail] = useState("");
+  const [enableSubmit, setEnableSubmit] = useState(false);
+  const [emailSubmitted, setEmailSubmitted] = useState(false);
 
   //email change 
-  useEffect(()=>{
+  useEffect(() => {
     const isValidEmail = validateEmail(email);
     setEnableSubmit(isValidEmail);
-  },[email])
+  }, [email])
 
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -44,7 +45,7 @@ const webAppCreative = () => {
     e.preventDefault();
 
     const payload = { email: email };
-  
+
     fetch(process.env.NEXT_PUBLIC_SEND_BLUE_URL, {
       method: "POST",
       headers: {
@@ -57,6 +58,7 @@ const webAppCreative = () => {
         console.log(response);
         if (response.ok) {
           localStorage.setItem('emailSubmitted', 'true');
+          setEmailSubmitted(true);
         } else {
           console.log("Error: POST request failed.");
           // Handle the case where the request failed
@@ -66,9 +68,9 @@ const webAppCreative = () => {
         console.error("Error:", error);
         // Handle any errors that occurred during the request
       });
-   
+
   }
-  
+
 
 
   return (
@@ -88,20 +90,21 @@ const webAppCreative = () => {
 
         <ResetCSS />
         <GlobalStyle />
-    
+
         <ContentWrapper>
           <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
             <DrawerProvider>
               <Navbar />
             </DrawerProvider>
           </Sticky>
-          <Banner signUpHandler={signUpButtonHandler} emailChangeHandler={setEmail} enableSubmit={enableSubmit}/>
+          <Banner signUpHandler={signUpButtonHandler} emailChangeHandler={setEmail} enableSubmit={enableSubmit} emailSubmitted={emailSubmitted} />
+
           <HowItWorks />
           <CustomMeditation />
           <Dashboard />
 
           <Faq />
-          <CallToAction />
+          <CallToAction signUpHandler={signUpButtonHandler} emailChangeHandler={setEmail} enableSubmit={enableSubmit} emailSubmitted={emailSubmitted} />
           <Footer />
         </ContentWrapper>
       </Fragment>
