@@ -42,14 +42,14 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
               menuItems={menu_items}
               offset={-70}
             />
-            <Link href="#">
+            <Link href="#home">
               <a className="navbar_button navbar_button_one">
-                <Button {...button} title="Login Now" />
+                <Button {...button} title="Enter Email" />
               </a>
             </Link>
-            <Link href="#">
+            <Link href="#how-to">
               <a className="navbar_button navbar_button_two">
-                <Button {...button} title="Join Free" />
+                <Button {...button} title="How it works" />
               </a>
             </Link>
             <Drawer

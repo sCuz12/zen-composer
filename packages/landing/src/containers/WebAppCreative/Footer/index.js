@@ -29,12 +29,12 @@ const Footer = () => {
           <div className='flex w-full justify-center items-center'>
           <ContactInfo>
             <Heading as="h4" content={footerTop.contactInfo.title} />
-            <InfoItem>
+            {/* <InfoItem>
               <Icon icon={ic_place} size={24} />
               <Text content={footerTop.contactInfo.address} />
-            </InfoItem>
+            </InfoItem> */}
             <InfoItem>
-              <Icon icon={ic_phone} size={26} className="phone-icon" />
+              {/* <Icon icon={ic_phone} size={26} className="phone-icon" /> */}
               <div>
                 <Text
                   className="phone-number"

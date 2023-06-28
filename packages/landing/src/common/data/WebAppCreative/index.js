@@ -387,28 +387,28 @@ export const posts = [
 export const faqs = [
   {
     id: 1,
-    title: '01. What is the process of project final delivery system?',
-    description: `Our Customer Experience Team is available 7 days a week and we offer 2 ways to get in contact.Email and Chat. We try to reply quickly, so you need not to wait too long for a response!.`,
+    title: '01. What is Zencomposer?',
+    description: `Zencomposer is a web app that empowers you to craft custom meditations tailored to your preferences. With just a few simple inputs, such as meditation style, desired voice, and background music, ZenComposer's AI technology generates a unique meditation script and brings it to life in a soothing, AI-generated voice. Experience the joy of creating personalized meditations that resonate with your inner self and enhance your meditation practice.`,
   },
   {
     id: 2,
-    title: '02. What is payment process, believe in upfront?',
-    description: `Please read the documentation carefully. We also have some online  video tutorials regarding this issue. If the problem remains, Please Open a ticket in the support forum.`,
+    title: '02. WHow does Zencomposer work?',
+    description: `ZenComposer utilizes an intuitive form where users can select their desired meditation style, voice, and background music. The artificial intelligence algorithm then generates a unique meditation script and delivers it in the chosen voice. Users can further customize their experience to create a personalized meditation session.`,
   },
   {
     id: 3,
-    title: '03. What is the process of project final delivery system?',
-    description: `At first, Please check your internet connection. We also have some online  video tutorials regarding this issue. If the problem remains, Please Open a ticket in the support forum.`,
+    title: '03. What types of meditation styles are available?',
+    description: `Zencomposer provides a diverse range of meditation styles to cater to different needs and preferences. From mindfulness and gratitude to trauma healing and happiness, you can choose the style that aligns with your goals and intentions.`,
   },
   {
     id: 4,
-    title: '04. Estimate project budget for categories?',
-    description: `Our core members created this place for Designers, Developers, Product Owners, Marketing Managers, startup's, Freelancers and really for everyone who appreciates fine designs and well-crafted sites. We want to inspire and support you in the process of creating your own unique website projects.`,
+    title: '04. Is Zencomposer suitable for beginners?',
+    description: `Yes, ZenComposer is designed to accommodate both beginners and experienced meditators. The user-friendly interface and customizable features make it easy for beginners to create and enjoy personalized meditation sessions. Additionally, guided meditation options are available to provide support and guidance for those new to meditation.`,
   },
   {
     id: 5,
-    title: '05. All about project customization & monetization',
-    description: `We are giving the update of this theme continuously. You will receive an email Notification when we push an update. Always try to be updated with us.`,
+    title: '05. How can I stay updated on ZenComposers progress?',
+    description: `To stay informed about the latest updates, releases, and exciting developments with ZenComposer, you can sign up for our newsletter. Simply enter your email in the form provided, and we'll keep you in the loop!`,
   },
 ];
 
@@ -513,11 +513,7 @@ export const footerTop = {
     },
   ],
   contactInfo: {
-    title: 'Contact info',
-    address: `Mohakhali DOHS, Amsterdam, Netherlands`,
-    phone: `+31 62 19 22 705`,
-    openingTime: `7 Days - 8am - 10pm`,
-    email: `info@redqteam.com`,
+    email: `georgehadjisavvas12@gmail.com`,
   },
 };
 
