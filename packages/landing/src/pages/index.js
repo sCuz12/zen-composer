@@ -100,9 +100,8 @@ const webAppCreative = () => {
           <Banner signUpHandler={signUpButtonHandler} emailChangeHandler={setEmail} enableSubmit={enableSubmit} emailSubmitted={emailSubmitted} />
 
           <HowItWorks />
-          <CustomMeditation />
           <Dashboard />
-
+          <CustomMeditation />
           <Faq />
           <CallToAction signUpHandler={signUpButtonHandler} emailChangeHandler={setEmail} enableSubmit={enableSubmit} emailSubmitted={emailSubmitted} />
           <Footer />

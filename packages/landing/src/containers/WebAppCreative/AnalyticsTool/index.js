@@ -9,7 +9,7 @@ import Button from 'common/components/Button';
 import Text from 'common/components/Text';
 import Link from 'common/components/Link';
 import Heading from 'common/components/Heading';
-import analytics from 'common/assets/image/webAppCreative/analytics.png';
+import meditation_breathing from 'common/assets/image/webAppCreative/meditation_breathing.webp';
 import Section, { Grid, Figure, Content, Features } from './analytics.style';
 import parallaxBg from 'common/assets/image/webAppCreative/parallax-1.png';
 
@@ -22,7 +22,7 @@ const CustomMeditation = () => {
         <Grid>
           <Fade up>
             <Figure>
-              <NextImage src={analytics} alt="analytics" />
+              <NextImage src={meditation_breathing} alt="breathing" />
             </Figure>
           </Fade>
           <Content>
