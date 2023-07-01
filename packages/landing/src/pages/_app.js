@@ -8,7 +8,6 @@ import 'common/assets/css/react-slick.css';
 import 'common/assets/css/rc-collapse.css';
 import 'rc-collapse/assets/index.css';
 import 'common/assets/css/rc-drawer.css';
-import './globals.css';
 
 export default function CustomApp({ Component, pageProps }) {
   return (
