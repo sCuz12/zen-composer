@@ -26,7 +26,7 @@ const Footer = () => {
     <Section>
       <Container width="1400px">
 
-          <div className='flex w-full justify-center items-center'>
+       
           <ContactInfo>
             <Heading as="h4" content={footerTop.contactInfo.title} />
             {/* <InfoItem>
@@ -48,7 +48,6 @@ const Footer = () => {
               <Text content={footerTop.contactInfo.email} />
             </InfoItem>
           </ContactInfo>
-          </div>
           
   
       </Container>
